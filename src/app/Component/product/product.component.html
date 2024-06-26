@@ -1,0 +1,33 @@
+   <!-- Your component HTML file -->
+   <div class="container mt-4 mb-4 recipe-container">
+    <button class="btn btn-primary mb-3" (click)="OnAdd()">Add</button>
+    <div class="row">
+      <div class="col-md-4 mb-4 d-flex align-items-stretch" *ngFor="let product of ListOfProduct">
+        <div class="card p-3 product-card" (click)="DisplayDetails(product)">
+          <div class="card_image">
+            <img [src]="product.imagePath" class="img-fluid">
+          </div>
+          <div class="card_content mt-3">
+            <p class="card_title"><b>Product Name:</b> {{product.productName}}</p>
+            <div class="card_text">
+              <p><b>Description:</b> {{product.ProductDescription}}</p>
+              <div class="card m-2 col-12">
+                <div class="card-body">
+                  <div class="ingredient-item">
+                    <span class="card-text ingredient-name">Quantity:</span>
+                    <span class="card-text ingredient-amount">{{product.productCountity}}</span>
+                  </div>
+                  <div class="ingredient-item">
+                    <span class="card-text ingredient-name">Price:</span>
+                    <span class="card-text ingredient-amount">{{product.productPrice}}</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-success mt-auto float-end" (click)="OnAddToCart(product)">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

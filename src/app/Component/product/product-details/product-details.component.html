@@ -1,0 +1,70 @@
+<!-- 
+<div *ngIf="selectedProduct"  class="mt-6">
+    <div class="row col-md-8 m-6">
+                  <div class="main" >
+                          <div class="card p-3" >
+                            <div class="card_image"><img [src]="selectedProduct.imagePath"  ></div>
+                            <div class="card_content mt-3">
+                              <p class="card_title"> <b>Product Name:</b>{{selectedProduct.productName}} </p>
+                              <div class="card_text">
+                                <p> <b>Description : </b>  {{selectedProduct.ProductDescription}}</p>
+                                
+                                <div class="card m-2 col-12">
+                                  <div class="card-body">
+                                    
+                                      <div  class="ingredient-item" >
+                                          <span class="card-text ingredient-name"> quantity</span>
+                                          <span class="card-text ingredient-amount">{{selectedProduct.productCountity}}</span>
+                                      </div>
+                                      <div  class="ingredient-item" >
+                                        <span class="card-text ingredient-name"> Price</span>
+                                        <span class="card-text ingredient-amount">{{selectedProduct.productPrice}}</span>
+                                    </div>
+                                  </div>
+                                
+                              </div>
+                              <button class="btn btn-success float-end"  (click)="OnAddToCart(selectedProduct)">Add To Cart</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+  
+        
+        
+      </div>
+  </div> -->
+
+
+
+  <!-- Your component HTML file -->
+<!-- Your component HTML file -->
+<div *ngIf="selectedProduct" class=" containet d-flex justify-content-center align-items-center min-vh-100">
+  <div class="col-md-8">
+    <div class="main">
+      <div class="card p-3 product-detail-card">
+        <div class="card_image">
+          <img [src]="selectedProduct.imagePath" class="img-fluid">
+        </div>
+        <div class="card_content mt-3">
+          <p class="card_title"><b>Product Name:</b> {{selectedProduct.productName}}</p>
+          <div class="card_text">
+            <p><b>Description:</b> {{selectedProduct.ProductDescription}}</p>
+            <div class="card m-2 col-12">
+              <div class="card-body">
+                <div class="ingredient-item">
+                  <span class="card-text ingredient-name">Quantity</span>
+                  <span class="card-text ingredient-amount">{{selectedProduct.productCountity}}</span>
+                </div>
+                <div class="ingredient-item">
+                  <span class="card-text ingredient-name">Price</span>
+                  <span class="card-text ingredient-amount">{{selectedProduct.productPrice}}</span>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-success float-end" (click)="OnAddToCart(selectedProduct)">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

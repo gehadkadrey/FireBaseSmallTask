@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Product WEBSITE</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"routerLink="/Products" *ngIf="isAuth" >products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register"  *ngIf="!isAuth" >Register </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/login"*ngIf="!isAuth" >login </a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link"(click)="onLogout()"  *ngIf="isAuth" >logout </a>
+          </li>
+       
+      </ul>
+    </div>
+  </nav>

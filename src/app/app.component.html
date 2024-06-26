@@ -1,0 +1,8 @@
+<app-header *ngIf="!isHide"></app-header>
+<div class="wrapper">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer *ngIf="!isHide"></app-footer>
+  </div>
+  
